@@ -12,6 +12,8 @@ We approached this problem by starting with a logistic regression model as our b
 ## Data
 Our data is from the IEEE-CIS Fraud Detection Kaggle Challenge. It is a tabular dataset that has records of transactions and information about the amount, card type, and more in a six month timeframe. There are 590,540 transactions. The data is given in the form of two csv files, one named identity and the other named transaction. The transaction dataset holds all transactions and on set of features, while the identity dataset holds a subset of the transactions with another different set of features regarding network information and the like. In other words, the identity dataset holds a bit more information for some transactions in the transaction dataset. We merge these two tables on their common features: TransactionID.
 
+https://www.kaggle.com/competitions/ieee-fraud-detection/data
+
 ## Data Preprocessing
 Most of our data cleaning focused on figuring out how to handle the large number of missing values, particularly for certain columns. Our initial approach was to drop the columns that had over 70% missing values, which we considered to be too noisy. For the rest of the missing values, because most of our features had certain values for most of the columns that had the highest frequency, we performed mode imputation.
 
